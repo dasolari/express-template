@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Express & Prisma Template</title>
+    <% if (env !== 'development') { %>
+    <link rel="stylesheet" href="<%= assetPath('app.css') %>" />
+    <% } %>
+  </head>
+
+  <body>
+    <%- include('layout/_header') %>
+    <main>
+      <%- body %>
+    </main>
+    <script src="<%= assetPath('app.js') %>"></script>
+  </body>
+</html>
