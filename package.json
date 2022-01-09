@@ -2,13 +2,14 @@
   "name": "express-template",
   "version": "1.0.0",
   "description": "Node.js template created using express and prisma",
-  "main": "index.js",
+  "main": "index.mjs",
+  "type": "module",
   "repository": "https://github.com/dasolari/express-template",
   "author": "Diego Solari <dasolari@uc.cl>",
   "license": "MIT",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js",
+    "start": "node --experimental-specifier-resolution=node index.js",
+    "dev": "nodemon --experimental-specifier-resolution=node index.js",
     "lint": "eslint ./src index.js",
     "lint-fix": "eslint --fix ./src index.js",
     "test": "dotenv -e .env.test jest -i"
@@ -23,9 +24,11 @@
     "dotenv-cli": "^4.1.1",
     "express": "^4.17.2",
     "express-ejs-layouts": "^2.5.1",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "url": "^0.11.0"
   },
   "devDependencies": {
+    "ejs": "^3.1.6",
     "eslint": "^8.6.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-base": "^15.0.0",
@@ -33,10 +36,13 @@
     "eslint-plugin-jest": "^25.3.4",
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "jest": "^27.4.7",
+    "node-sass": "^7.0.1",
     "nodemon": "^2.0.15",
-    "prisma": "^3.7.0"
+    "prisma": "^3.7.0",
+    "sass-loader": "^12.4.0"
   },
   "engines": {
-    "node": ">=16.13.0"
+    "node": ">=16.13.0",
+    "yarn": "^1.22.0"
   }
 }

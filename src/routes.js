@@ -1,8 +1,7 @@
-const express = require('express');
+import { Router } from 'express';
+import index from './routes/index';
 
-const router = express.Router();
-
-const index = require('./routes/index');
+const router = Router();
 
 router.use('/', index);
 
