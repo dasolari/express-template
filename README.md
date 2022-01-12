@@ -1,7 +1,7 @@
 # Express + Prisma Template 🐙
 An Express template using Prisma with Postgresql
 
-## Requirements
+## Requirements
 - [Node 16](https://nodejs.org/en)
 - [Postgresql](https://www.postgresql.org)
 
