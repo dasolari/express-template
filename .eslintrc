@@ -3,6 +3,9 @@
     "airbnb-base",
     "plugin:jest/recommended"
   ],
+  "parserOptions": {
+    "ecmaVersion": 2020
+  },
   "plugins": ["jest"],
   "env": {
     "jest/globals": true

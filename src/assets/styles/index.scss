@@ -1,1 +1,3 @@
-@import './layout'
+// Color variables are used in all the other files, so they must be imported first
+@import './colors';
+@import './layout';

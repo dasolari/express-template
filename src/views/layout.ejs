@@ -4,11 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <title>Express & Prisma Template</title>
-    <link rel="stylesheet" href="/src/assets/styles/index.scss" />
+    <% if (env !== 'development') { %>
+      <link rel="stylesheet" href="<%= assetPath('app.css') %>" />
+    <% } %>
   </head>
   <body>
     <%- include('layout/_header') %>
     <%- body %>
-    <script src="/src/assets/js/index.js"></script>
+    <script src="<%= assetPath('app.js') %>"></script>
   </body>
 </html>
