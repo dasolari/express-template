@@ -17,7 +17,7 @@ An Express template using Prisma with Postgresql
     ```bash
     DATABASE_URL=postgresql://postgres:postgres@localhost:5432/template_dev?schema=public
     ```
-    Keep in mind that the test database connection url (in `.env.test`) must have a different database name.
+    Keep in mind that the test database connection url (in `.env.test`) must have a different database name than the one in your `.env` file.
 2. Install the project dependencies:  
     ```bash
     yarn install
