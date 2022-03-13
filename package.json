@@ -12,6 +12,7 @@
     "dev": "nodemon --experimental-specifier-resolution=node .",
     "lint": "eslint ./src index.js",
     "lint-fix": "eslint --fix ./src index.js",
+    "prisma:generate": "npx prisma generate",
     "db:migrate": "npx prisma migrate dev",
     "db:reset": "npx prisma migrate reset",
     "db:seed": "npx prisma db seed",
