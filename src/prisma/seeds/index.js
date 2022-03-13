@@ -1,5 +1,7 @@
 /* eslint-disable no-console */
-import prisma from '../client';
+import Prisma from '@prisma/client';
+
+const prismaClient = new Prisma.PrismaClient();
 
 const seeder = async () => {
   // add seeds here
@@ -12,5 +14,5 @@ seeder()
   })
   .finally(async () => {
     console.log('Successfully seeded database. Closing connection.');
-    await prisma.$disconnect();
+    await prismaClient.$disconnect();
   });
