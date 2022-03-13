@@ -25,12 +25,11 @@ header {
     display: flex;
   }
   .app-logo {
-    text-transform: lowercase;
     font-size: 1.2em;
     font-weight: bold;
     display: flex;
     align-items: center;
-    padding-right: 20px;
+    padding: 1rem;
   }
   nav {
     flex: 1;

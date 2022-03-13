@@ -1,0 +1,10 @@
+<h1><%= hello %><%= lastHello.name %></h1>
+
+<h4>Would you like me to remember your name?</h4>
+<form action="<%= submitHelloPath %>" method="POST">
+  <div>
+    <label for="name">Name</label>
+    <input type="text" name="name" id="name" />
+  </div>
+  <input type="submit" value="Add your name" />
+</form>

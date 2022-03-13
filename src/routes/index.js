@@ -1,11 +1,8 @@
 import { Router } from 'express';
+import index from '../controllers/index';
 
 const router = Router();
 
-router.get('/', async (req, res) => {
-  res.render('index', {
-    welcome: 'Welcome to this Express + Prisma template',
-  });
-});
+router.get('/', index.index);
 
 export default router;

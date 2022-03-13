@@ -12,9 +12,11 @@
     "dev": "nodemon --experimental-specifier-resolution=node .",
     "lint": "eslint ./src index.js",
     "lint-fix": "eslint --fix ./src index.js",
-    "test": "dotenv -e .env.test jest -i"
+    "test": "dotenv -e .env.test jest -i",
+    "db:reset": "npx prisma migrate reset --skip-seed; npx prisma db push; npx prisma db seed"
   },
   "prisma": {
+    "schema": "src/prisma/schema.prisma",
     "seed": "node prisma/seeds"
   },
   "dependencies": {

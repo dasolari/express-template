@@ -1,7 +1,7 @@
 /* eslint no-console: "off" */
 import app from './src/app';
 
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, (error) => {
   if (error) {

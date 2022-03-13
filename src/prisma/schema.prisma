@@ -9,7 +9,7 @@ datasource db {
 
 model Hello {
   id        Int      @id @default(autoincrement())
-  text      String   @db.VarChar
-  createdAt DateTime @db.Timestamp(6)
-  updatedAt DateTime @db.Timestamp(6)
+  name      String   @db.VarChar
+  createdAt DateTime @db.Timestamp(6) @default(now())
+  updatedAt DateTime @db.Timestamp(6) @updatedAt
 }
