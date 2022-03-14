@@ -31,7 +31,10 @@ An Express template using Prisma with Postgresql
       updatedAt DateTime @db.Timestamp(6) @updatedAt
     }
     ```
-    All models have to be written in the same file (`schema.prisma`), so to keep a sort of order in your models, it's recommended that you write them in alphabetical order. To format your `schema.prisma`, press `Opt` + `Shift` + `F` on Mac and `Alt` + `Shift` + `F` on Windows.
+    All models have to be written in the same file (`schema.prisma`), so to keep a sort of order in your models, it's recommended that you write them in alphabetical order. To format your `schema.prisma`, press `Opt` + `Shift` + `F` on Mac and `Alt` + `Shift` + `F` on Windows. Then, run this command to save the Prisma types in your `node_modules` folder:
+    ```bash
+    yarn prisma:generate
+    ```
 4. Run a migration to reflect changes to your schema in the database:
     ```bash
     yarn db:migrate --name your-migration-name
