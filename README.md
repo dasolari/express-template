@@ -25,7 +25,7 @@ An Express template using Prisma with Postgresql
 3. Add a model to the schema in `src/prisma/schema.prisma`:
     ```prisma
     model Hello {
-      id        Int      @id @default(autoincrement())
+      id        String   @id @default(uuid()) @db.Uuid
       name      String   @db.VarChar
       createdAt DateTime @db.Timestamp(6) @default(now())
       updatedAt DateTime @db.Timestamp(6) @updatedAt
@@ -52,7 +52,7 @@ An Express template using Prisma with Postgresql
     ```bash
     yarn db:seed
     ```
-6. Now you can create a controller that interacts with your model. Create a new route file inside the `src/routes` folder; then add a reference to that file in the `src/routes.js` file, creating the route itself. At the same time, create the necessary logic for each route in the `src/controllers` folder, creating a file for each route. Finally, use each of those functions in your routes. Finally, create a new folder inside the `src/views` folder with the name of the route and add all the views related to each route there.
+6. Now you can create a controller that interacts with your model. Create a new route file inside the `src/handlers/api/routes` folder; then add a reference to that file in the `src/handlers/api/routes/index.js` file, creating the route itself. At the same time, create the necessary logic for each route in the `src/handlers/api/controllers` folder, creating a file for each route. You should also use the services folder to create all the functions that interact with the database directly, later importing each of these files into one ore more controllers. If you also want to make a view, you should follow the same process in the `src/handlers/ssr` folder. For this, create a new folder inside `src/views` with the name of the route and add all the views related to each route there.
 7. Finally, run your app with the command:
     ```bash
     yarn start
