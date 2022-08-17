@@ -8,7 +8,8 @@ import middleware from 'webpack-dev-middleware';
 import webpack from 'webpack';
 import webpackConfig from '../webpack.config';
 import assets from './assets';
-import routes from './routes';
+import ssrRoutes from './handlers/ssr/routes';
+import apiRoutes from './handlers/api/routes';
 
 /*
   App Configuration
@@ -52,6 +53,9 @@ app.use(middleware(compiler, {}));
 app.use(express.static(join(__dirname, '..', 'build')));
 
 // Routes
-app.use(routes);
+app.use(ssrRoutes);
+
+// Api Routes
+app.use('/api', apiRoutes);
 
 export default app;
